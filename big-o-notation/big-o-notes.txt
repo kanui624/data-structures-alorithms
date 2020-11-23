@@ -1,0 +1,6 @@
+Big O Notation Notes:
+
+- It's important to have a precise vocabulary to talk about how our code performs
+- Useful for discussing time and space trade-offs between different solutions
+- Big-O helps with debugging and identifying points in the code that are slowly the execution down or making it crash
+- Definitely needed for coding interviews
