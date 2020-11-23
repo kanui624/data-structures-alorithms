@@ -11,7 +11,8 @@
 // create a for loop that starts at 1 and loop n times
 // create a running sum and add next integer to the running sum each iteration
 
-const sumUp = (n) => {
+// Example 1:
+const sumUpA = (n) => {
   if (n < 1 || typeof n !== 'number') {
     console.log(`Argument: ${n} is invalid`);
   } else {
@@ -23,4 +24,11 @@ const sumUp = (n) => {
   }
 };
 
-const printSum = sumUp(5);
+const printSumA = sumUpA(5);
+
+// Example 2:
+const sumUpB = (n) => {
+  console.log((n * (n + 1)) / 2);
+};
+
+const printSumB = sumUpB(5);
