@@ -34,3 +34,20 @@ Big O Notation Notes:
         - As n grows the runtimes stays the same
     - f(n) could be exponential: (f(n) = 1^n)
     - f(n) could be something different
+
+Simplifying Big O Expressions
+    - Constants don't matter:
+        O(2n) => O(n)
+        O(500) => O(1)
+        O(13n^2) => O(n^2)
+    - Smaller Terms don't matter
+        0(n + 10) => O(n)
+        O(1000n + 50) => O(n)
+        O(n^2 + 5n + 8) => O(n^2) 
+
+Rules of Thumb for Time complexity
+    - Arithmetic operations are constant
+    - Variable assignment is constant
+    - Accessing elements in an array (by index) or object (by key) is constant
+    - In a loop, the complexity is the length of the loop times the complexity
+      of whatever happens inside the loop
