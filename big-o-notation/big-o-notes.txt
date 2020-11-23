@@ -4,3 +4,10 @@ Big O Notation Notes:
 - Useful for discussing time and space trade-offs between different solutions
 - Big-O helps with debugging and identifying points in the code that are slowly the execution down or making it crash
 - Definitely needed for coding interviews
+
+- Things to think about when comming up with a solution and writing code for it:
+    - Do I have any time and space limitations that I should be considering?
+    - How fast does it Run?
+    - How much memory does it use? 
+    - Is my code readable? 
+    

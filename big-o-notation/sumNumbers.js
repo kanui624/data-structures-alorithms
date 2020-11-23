@@ -11,24 +11,38 @@
 // create a for loop that starts at 1 and loop n times
 // create a running sum and add next integer to the running sum each iteration
 
+const { performance } = require('perf_hooks');
+
 // Example 1:
 const sumUpA = (n) => {
-  if (n < 1 || typeof n !== 'number') {
-    console.log(`Argument: ${n} is invalid`);
-  } else {
-    let runningSum = 0;
-    for (let i = 1; i <= n; i++) {
-      runningSum += i;
-    }
-    console.log(runningSum);
+  //   if (n < 1 || typeof n !== 'number') {
+  //     console.log(`Argument: ${n} is invalid`);
+  //   } else {
+  let runningSum = 0;
+  for (let i = 1; i <= n; i++) {
+    runningSum += i;
   }
+  return runningSum;
 };
 
-const printSumA = sumUpA(5);
+// const printSumA = sumUpA(5);
 
 // Example 2:
 const sumUpB = (n) => {
-  console.log((n * (n + 1)) / 2);
+  return (n * (n + 1)) / 2;
 };
 
-const printSumB = sumUpB(5);
+// const printSumB = sumUpB(5);
+
+// Checking Run Time with a helper function:
+
+const timeOne = performance.now();
+sumUpA(1000000000);
+const timeTwo = performance.now();
+
+const timeThree = performance.now();
+sumUpB(1000000000);
+const timeFour = performance.now();
+
+console.log(`Time To Run A: ${(timeTwo - timeOne) / 1000} seconds`);
+console.log(`Time To Run B: ${(timeFour - timeThree) / 1000} seconds`);
