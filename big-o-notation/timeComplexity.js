@@ -80,7 +80,7 @@ logAtLeast5(6);
 console.log(
   '#####################################################################'
 );
-console.log('Linear Example: O(1)');
+console.log('Constant Example: O(1)');
 
 const logAtMost5 = (n) => {
   for (let i = 1; i <= Math.min(5, n); i++) {

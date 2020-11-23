@@ -51,3 +51,19 @@ Rules of Thumb for Time complexity
     - Accessing elements in an array (by index) or object (by key) is constant
     - In a loop, the complexity is the length of the loop times the complexity
       of whatever happens inside the loop
+
+Space Complexity
+    - How much additional memory do we need to allocate in order to run the code 
+      in our algorithm?
+    - When talking about space complexity we're talking about Auxillary space 
+      complexity, unless otherwise noted
+
+* Auxillary Space: the space required by the algorithm, not including space taken
+  up by the inputs.
+
+Rules of Thumb for Space complexity:
+    - Most primitives (booleans, numbers, undefined, null) are constant space
+    - Strings require O(n) space (where n is the string length)
+    - Reference types (arrays, objects) are generally O(n), where n is the length 
+      (for arrays) or the number of keys (for objects)
+    
