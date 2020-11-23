@@ -1,4 +1,5 @@
 // The Algorithm Below runs in O(n) time
+// or in Linear time
 
 const countUpDown = (n) => {
   // This console.log() is independent of n
