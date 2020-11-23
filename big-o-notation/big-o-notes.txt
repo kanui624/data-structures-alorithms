@@ -73,11 +73,23 @@ Logarithms
         - log(base2)Value = exponent => 2^exponent = Value
     - We can omit the base 2 when writing log notation becasue it is assumed in 
       computer programming
-    - Logarithmic Time complexity is great! It's the next best to constant time
+    - Logarithmic Time complexity is great! O(log n) Is the next best to constant time
 
 Rule of Thumb
     - The logarithm of a number roughly measures the number of times you can divde 
       that number by 2 before you get a value that id less than or equal to 1
     - Below since we divided three times below log8 = 3
     (8 / 2) = (4 / 2) = (2 / 2) = 1
-    
+
+Algorithms to watch for logarithmic time complexity
+    - Certain searching Algorithms, some of which are very efficient
+    - Recursion sometimes involves logarithmic space complexity
+
+Recap Notes
+    - To analyze the performance of an algorithm we can use big O notation 
+    - Big O notation can give us a high level understanding of the time or space
+      implications of an algorithm
+    - Big O notation doesn't care about prcision, only about the general (linear?
+      quadratic? constant?)
+    - Time and space complexity (as measured by big O), depends only on the 
+      algorithm, not the hardware used to run the algorithm  
