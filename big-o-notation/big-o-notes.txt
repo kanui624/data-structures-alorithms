@@ -2,7 +2,8 @@ Big O Notation Notes:
 
 - It's important to have a precise vocabulary to talk about how our code performs
 - Useful for discussing time and space trade-offs between different solutions
-- Big-O helps with debugging and identifying points in the code that are slowly the execution down or making it crash
+- Big-O helps with debugging and identifying points in the code that are slowly 
+  the execution down or making it crash
 - Definitely needed for coding interviews
 
 - Things to think about when comming up with a solution and writing code for it:
@@ -14,10 +15,22 @@ Big O Notation Notes:
 - The Problem with time: 
     - Time will record differently on different machines
     - Even the same machine will record different run times on the same solution
-    - For specifically fast running solutions, speed measurments may not be precise enough
+    - For specifically fast running solutions, speed measurments may not be 
+      precise enough
     
 - The base idea of Big-O Notation:
-    - Instead of counting actual runtime seconds which are so variable, we should count and label specific operations 
-      computer has to perform, a label that remains constant independent of the machine we are running it from
-    - 
-    
+    - Instead of counting actual runtime seconds which are so variable, we should 
+      count and label specific operations computer has to perform, a label that 
+      remains constant independent of the machine we are running it from
+    - It allows us to talk formally about how the runtime of an algorithm grows as 
+      the inputs grow
+
+- Big O Definition 
+    - f(n) could be linear: (f(n) = n)
+        - As n scales up, the run time scales up proportionally 
+    - f(n) could be quadratic: (f(n) = n^2)
+        - The runtime is related to the square of n 
+    - f(n) could be constant: (f(n) = 1)
+        - As n grows the runtimes stays the same
+    - f(n) could be exponential: (f(n) = 1^n)
+    - f(n) could be something different

@@ -17,6 +17,7 @@ const { performance } = require('perf_hooks');
 // Operations:
 // n additions and n assignments
 // n comparisions
+// As n grows the number of operations grow proportionally
 const sumUpA = (n) => {
   //   if (n < 1 || typeof n !== 'number') {
   //     console.log(`Argument: ${n} is invalid`);
@@ -35,6 +36,7 @@ const sumUpA = (n) => {
 // multiplication
 // addition
 // division
+// As n grows the number of operations stays constant
 const sumUpB = (n) => {
   return (n * (n + 1)) / 2;
 };
