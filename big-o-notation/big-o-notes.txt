@@ -10,4 +10,14 @@ Big O Notation Notes:
     - How fast does it Run?
     - How much memory does it use? 
     - Is my code readable? 
+
+- The Problem with time: 
+    - Time will record differently on different machines
+    - Even the same machine will record different run times on the same solution
+    - For specifically fast running solutions, speed measurments may not be precise enough
+    
+- The base idea of Big-O Notation:
+    - Instead of counting actual runtime seconds which are so variable, we should count and label specific operations 
+      computer has to perform, a label that remains constant independent of the machine we are running it from
+    - 
     

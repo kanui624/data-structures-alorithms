@@ -14,6 +14,9 @@
 const { performance } = require('perf_hooks');
 
 // Example 1:
+// Operations:
+// n additions and n assignments
+// n comparisions
 const sumUpA = (n) => {
   //   if (n < 1 || typeof n !== 'number') {
   //     console.log(`Argument: ${n} is invalid`);
@@ -28,6 +31,10 @@ const sumUpA = (n) => {
 // const printSumA = sumUpA(5);
 
 // Example 2:
+// Operations:
+// multiplication
+// addition
+// division
 const sumUpB = (n) => {
   return (n * (n + 1)) / 2;
 };
