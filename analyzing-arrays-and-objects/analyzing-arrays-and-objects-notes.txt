@@ -13,4 +13,11 @@ We use Objects when:
                 - Object.values: O(n) Linear Time
                 - Object.entries: O(n) Linear Time
                 - hasOwnProperty: O(1) Constant Time
-        
+We use Arrays when:
+    - We need order
+    - We need fast access / insertion / removal (sort of...)
+        - Time complexity of these operations in an array:
+                - Insertion: It depends...
+                - Removal: It depends...
+                - Searching: - O(n)
+                - Access: O(1)
