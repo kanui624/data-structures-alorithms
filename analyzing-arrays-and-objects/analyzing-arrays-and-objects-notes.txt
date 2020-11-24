@@ -1,0 +1,16 @@
+Analyzing Arrays and Objects Notes:
+
+We use Objects when: 
+    - We don't need to worry about order
+    - We need fast access / insertion / removal / searching
+        - The time complexity of these operations on and object with key/value pairs:
+                - Access: O(1) Constant Time
+                - Insertion: O(1) Constant Time
+                - Removal: O(1) Constant Time
+                - Searching: O(n) Linear Time
+        - The time complexity of these Object Methods are:
+                - Object.keys: O(n) Linear Time
+                - Object.values: O(n) Linear Time
+                - Object.entries: O(n) Linear Time
+                - hasOwnProperty: O(1) Constant Time
+        
