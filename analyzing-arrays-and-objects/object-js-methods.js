@@ -39,3 +39,13 @@ console.log(entries);
 // methods, as the object grows the .entries() method will traverse the
 // extent of the object while adding the key/value pairs to the output
 // array
+
+// .hasOwnProperty() Object Method:
+
+const hasOwnProperty = instructor.hasOwnProperty('firstName');
+
+console.log(hasOwnProperty);
+// Outputs:
+// true
+// O(1) Constant Time, because if the key name is known, finding out
+// whether there's a match within the object or not, is constant
