@@ -32,3 +32,27 @@ Understand the Problem
         question until you set about solving the problem. That's okay, it's still 
         worth considering the question at this early stage)
         - How should I label the important 
+
+Exploring Concrete examples
+    - Coming up with examples can help you understand the problem better
+    - Examples also provide sanity checks that your eventual solution works how it
+    should
+    
+Explore Examples   
+    - Start with simple Examples        
+    - Progress to more complex examples
+    - Explore examples with empty inputs
+    - Explore examples with invalid inputs
+    
+Break it down
+    - Write psuedo code or simple step by step comments
+            - This helps you to think about your code you'll write before you write 
+            it, and helps you catch any lingering conceptual issues or 
+            misunderstandings before you dive in and have to worry about details
+Solve and Simplify
+    - Solve the problem if you can and if not then solve a simpler problem
+    - Find the core difficulty in what you're trying to do 
+    - Temporarily ignore that difficulty
+    - Write a simplified solution 
+    - Then incorporate that difficulty
+    
