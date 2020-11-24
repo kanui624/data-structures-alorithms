@@ -4,7 +4,7 @@ let instructor = {
   favoriteNumbers: [1, 2, 3, 4],
 };
 
-// Keys method:
+// Keys Object Method:
 const keys = Object.keys(instructor);
 
 console.log(keys);
