@@ -1,0 +1,34 @@
+Objectives
+    - Define what an algorithm is
+    - Devise a plan to solve algorithms
+    - Compare and contrast problem solving patterns including frequency counters,
+      two pointer problems and divide and conquer
+    
+What is an Algorithm?
+    - A process or set of steps to accomplish a certain task
+
+Why do we need to know this as programmers?
+    - Almost everything that we do in programming involves some kind of algorithm
+    - It's the foundation for being a successful problem solver and developer
+
+How to improve? 
+    - Devise a plan for solving problems
+    - Master common problem solving patterns
+
+Problem Solving Strategies
+    - Understand the problem 
+    - Explore concrete examples 
+    - Break it down 
+    - Solve/Simplify
+    - Look Back and Refactor
+
+Understand the Problem 
+    - Questions to ask interviewer or yourself:
+        - Can you restate the problem in your own words?
+        - What are the inputs that go into the problem?
+        - What outputs should come from the solution to the problem?
+        - Can the outputs be determined from the inputs? In other words, do I have
+        enough information to solve the problem? (You may not be able to answer this
+        question until you set about solving the problem. That's okay, it's still 
+        worth considering the question at this early stage)
+        - How should I label the important 

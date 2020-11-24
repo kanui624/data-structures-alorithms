@@ -27,3 +27,14 @@ constant time vs linear time because the former simply appened or remove an inde
 not affecting the order of any other elements while the latter affect the index 
 assignment of all subsequent elements
 
+Array Methods and thier time complexities:
+    - Push:     O(1) - Appends new elements to an array, and returns the new length of the array.
+    - Pop:      O(1)
+    - Shift:    O(N) - Removes the first element from an array and returns it.
+    - Unshift:  O(N) - Inserts new elements at the start of an array.
+    - Concat:   O(N)
+    - Slice:    O(N)
+    - Splice:   O(N)
+    - Sort:     O(N*LogN)
+    - forEach/Map/Filter/Reduce: O(N)
+
