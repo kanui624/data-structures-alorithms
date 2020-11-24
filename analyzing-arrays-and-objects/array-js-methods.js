@@ -17,7 +17,7 @@ console.log(names[3]);
 // O(1) Time - Appending to the end of an array runs in constant time
 
 // Appending to the beginning of an array
-const namePushBeginning = names.unshift('Jobin');
+const nameUnshiftBeginning = names.unshift('Jobin');
 
 console.log(names[0]);
 // Outputs:
@@ -25,3 +25,12 @@ console.log(names[0]);
 // O(n) Time - Appending to the beginning of an array runs in linear
 // time because the 0 index is now mapped to a different value forcing
 // every other element in the array to be reassigned a new index
+
+const nameShiftBeginning = names.shift();
+
+console.log(nameShiftBeginning);
+// Outputs:
+// Jobin
+// O(n) Time - Removing an element from the beginning of an array also
+// runs in linear time because it changes the index of all subsequent
+// elements in the array
