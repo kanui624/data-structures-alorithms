@@ -87,20 +87,37 @@ console.log(sumTwoNumbers(3, 5));
 const charCount = (string) => {
   // create and initialize an empty hash table labeled charTable
   let charTable = {};
-  // for every char in the now lowercased string
-  for (const char of string.toLowerCase()) {
-    // check if char is already in charTable
-    if (char in charTable) {
-      // if it is then increment the already existing value
-      charTable[char]++;
-    } else {
-      // if char is not already present in charTable,
-      // put it in and set it's value to 1
-      charTable[char] = 1;
+  // for every element in string
+  for (let char of string) {
+    // only allow uppercase/lowercase letters, and numbers through
+    if (isAlphanumeric(char)) {
+      // lowercase all letters
+      char = char.toLowerCase();
+      // check if char is already in charTable
+      if (char in charTable) {
+        // if it is then increment the already existing value
+        charTable[char]++;
+      } else {
+        // if char is not already present in charTable,
+        // put it in and set it's value to 1
+        charTable[char] = 1;
+      }
     }
   }
   // return the charTable object
   return charTable;
+};
+
+const isAlphanumeric = (char) => {
+  let code = char.charCodeAt(0);
+  if (
+    !(code > 47 && code < 58) && // numeric (0-9)
+    !(code > 64 && code < 91) && // upper alpha (A-Z)
+    !(code > 96 && code < 123) // lower alpha (a-z)
+  ) {
+    return false;
+  }
+  return true;
 };
 
 // Corner Cases we still need to check:
