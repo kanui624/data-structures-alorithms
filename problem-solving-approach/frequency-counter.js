@@ -30,27 +30,27 @@
 // arrOne = [1, 2, 3, 4, 5, 6] arrTwo = [ 36, 9, 16, 1, 25, 4] - Return true
 
 // My failed  but close solution
-// const same = (arrOne, arrTwo) => {
-//   const arrTable = {};
-//   let bool = false,
-//     inc = 1;
-//   if (arrOne.length != arrTwo.length) {
-//     return false;
-//   } else {
-//     for (let i = 0; i < arrOne.length; i++) {
-//       arrTable[arrOne[i]] = 1;
-//       if (Math.sqrt(arrTwo[i]) in arrTable) {
-//         arrTable[arrOne[i]]++;
-//         bool = true;
-//         inc++;
-//       } else {
-//         bool = false;
-//         inc--;
-//       }
-//     }
-//   }
-//   console.log(bool, inc);
-// };
+const sameOne = (arrOne, arrTwo) => {
+  const arrTable = {};
+  let bool = false,
+    inc = 1;
+  if (arrOne.length != arrTwo.length) {
+    return false;
+  } else {
+    for (let i = 0; i < arrOne.length; i++) {
+      arrTable[arrOne[i]] = 1;
+      if (Math.sqrt(arrTwo[i]) in arrTable) {
+        arrTable[arrOne[i]]++;
+        bool = true;
+        inc++;
+      } else {
+        bool = false;
+        inc--;
+      }
+    }
+  }
+  console.log(bool, inc);
+};
 
 // same([1, 2, 3, 4, 5, 6], [2, 78, 9, 16, 25, 36]);
 
@@ -62,7 +62,7 @@
 // next  initialize a pointer to check if the squareRoot of all the value
 
 // Naive Solution - O(N^2) Time
-const same = (arrOne, arrTwo) => {
+const sameTwo = (arrOne, arrTwo) => {
   if (arrOne.length !== arrTwo.length) {
     return false;
   } else {
@@ -87,3 +87,53 @@ const same = (arrOne, arrTwo) => {
 // If the .indexOf() method returns a valid index, remove that index from arrTwo
 // If we reach the end of our iterations then we know that we made a match
 // for every index in arrOne to every index in arrTwo and now we can return true
+
+// * two for loops is vastly better in regards to time complexity in comparison
+// to nested for loops
+
+// Refactored O(N) solution
+const same = (arrOne, arrTwo) => {
+  // If the lengths of both array are not equal return false
+  if (arrOne.length !== arrTwo.length) {
+    return false;
+  }
+  let freqCountOne = {};
+  let freqCountTwo = {};
+  // Push the contents of both arrays into the initialized objects via a loop
+  for (let i = 0; i < arrOne.length; i++) {
+    arrOne[i] in freqCountOne
+      ? freqCountOne[arrOne[i]]++
+      : (freqCountOne[arrOne[i]] = 1);
+
+    arrTwo[i] in freqCountTwo
+      ? freqCountTwo[arrTwo[i]]++
+      : (freqCountTwo[arrTwo[i]] = 1);
+  }
+
+  for (let key in freqCountOne) {
+    // Check if the squared version of the keys in freqCountOne are in freqCountTwo
+    if (!(key ** 2 in freqCountTwo)) {
+      return false;
+    }
+    // Check if the frequency of instances of the given key equals are the same amount
+    // in both objects
+    if (freqCountTwo[key ** 2] !== freqCountOne[key]) {
+      return false;
+    }
+  }
+  // If everything checks out return true
+  return true;
+};
+
+console.log(same([1, 2, 3, 4, 6, 6], [1, 4, 9, 16, 36, 36]));
+
+// This runs in O(N * N) Time due to the two for loops which simplifies to O(N)
+// To compare if the length of the input array is 1,000, with 2 for loops thats 2000
+// iterations, vs nested for loops which is 1,000 * 1,000 or 1,000,000 iterations.
+// So it's 2,000 iterations vs 1,000,000 iterations.
+
+// check if both array lengths are the same
+// initialize two empty objects to push the array contents into
+// push the contents of each array into their respective object
+// iterate through arrOne and check if arrOne[i] ** 2 is in arrTwo
+// if not return false
