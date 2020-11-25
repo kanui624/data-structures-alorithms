@@ -76,4 +76,12 @@ Some of the patterns for solving problems:
     - Dynamic programming
     - Greedy algorithms
     - Backtracking
-    
+
+ASCII codes: 
+32 - 47 space && spacial characters
+48 - 57 numbers
+58 - 68 more special characters
+65 - 90 Upper case English alphabet
+91 - 96 more special characters
+97 - 122 lowercase alphabet
+123 - 127 special characters and delete
