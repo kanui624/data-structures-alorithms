@@ -63,4 +63,17 @@ Look back and Refactor
     - Can you improve the performance of your solution?
     - Can you think of other ways to Refactor?
     - How have other people solved this problem?
+
+How to improve at problem solving:
+    - Devise a plan for solving problems
+    - Master common problem solving patterns
+
+Some of the patterns for solving problems:
+    - Frequency counter
+    - Multiple Pointers
+    - Sliding Window
+    - Divide and conquer
+    - Dynamic programming
+    - Greedy algorithms
+    - Backtracking
     
