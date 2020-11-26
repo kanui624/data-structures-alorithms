@@ -20,8 +20,12 @@
 // not found
 // Edge Cases:
 // what if the input array.length is 0?
+// What if n is a negative integer?
 // Test Cases:
-// divideConquer([1,2,3,4,5,6,7,8,9], 5) => return 6
+// divideConquer([1,2,3,4,5,6,7,8,9], 4) => return 3
 // divideConquer([-8,-3,-1, 0], 2) => return -1
 
 // Pseudo Code:
+//
+// check if n is greater than array[array.length / 2]
+// if greater
