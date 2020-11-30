@@ -73,3 +73,13 @@ console.log(sameFrequency(182, 382));
 
 // Time Complexity: O(N * N * 1 * N * N * N) => O(N)
 // Space Complaxity: O(1 * 1 * 1 * N * N * N * 1) => O(N)
+
+// Things Learned:
+// - Cannot perform .length on an integer must be converted to string first
+// - converting to string runs in O(N) time
+// - At the construction of a string the .length property is determined
+//   and is immutable
+// - Strings are similar to arrays in the way thier indices are accessed
+//   accessing an index in a string runs in O(1) constant time because at
+//   string construction every character in the string is treated like a
+//   value in an array and is given a index number
