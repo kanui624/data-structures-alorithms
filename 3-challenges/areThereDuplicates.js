@@ -18,17 +18,25 @@
 // areThereDuplicates(a, v, c) => false
 
 const areThereDuplicates = (...args) => {
-  let dupCheck = {};
+  // O(1): Time
+  // O(N): Space
+  const dupCheck = {};
+  // O(N): Time
+  // O(N): Space
   for (let arg of args) {
-    args[arg] in dupCheck ? dupCheck[arg]++ : (dupCheck[arg] = 1);
+    arg in dupCheck ? dupCheck[arg]++ : (dupCheck[arg] = 1);
   }
-  for (let value in dupCheck) {
-    if (value >= 2) {
+  // O(N): Time
+  // O(1): Space
+  for (const value in dupCheck) {
+    if (dupCheck[value] === 2) {
       return true;
     } else {
-      return false;
+      continue;
     }
   }
+  return false;
 };
 
-console.log(areThereDuplicates(1, 2, 2));
+// console.log(areThereDuplicates('a', 'b', 'c', 'd', 'e', 'e', 'f', 'g', 'h'));
+console.log(areThereDuplicates(1, 2, 3, 4, 4, 5, 6, 7, 8));
