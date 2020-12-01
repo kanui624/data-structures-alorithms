@@ -98,3 +98,10 @@ function areThereDuplicatesLinear() {
 }
 
 console.log(areThereDuplicatesLinear(1, 2, 3, 4, 4, 5, 6, 7, 8));
+
+// Things learned:
+// The new Set object creates a new object with the array of values given and doesn't count the
+// same values twice if given duplicates
+// The .size() method calculates the length of a set object
+// arguments is a key word and can be used to represent arguments passed in when there is no
+// specific value written in the paratheses
