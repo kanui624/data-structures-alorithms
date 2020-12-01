@@ -42,7 +42,7 @@ const areThereDuplicates = (...args) => {
 console.log(areThereDuplicates(1, 2, 3, 4, 4, 5, 6, 7, 8));
 
 // Instructor Solution One: Frequency Counter
-function areThereDuplicates() {
+function areThereDuplicates1() {
   // Initialize an empty object to store values from the argument and their respective
   // frequencies
   let collection = {};
@@ -60,7 +60,7 @@ function areThereDuplicates() {
   return false;
 }
 
-function areThereDuplicates(...args) {
+function areThereDuplicates2(...args) {
   // Two pointers
   // sort the given array of arguments
   args.sort((a, b) => a > b);
@@ -82,3 +82,19 @@ function areThereDuplicates(...args) {
   // if we get through the entire loop without returning true then return false
   return false;
 }
+
+function areThereDuplicatesLinear() {
+  // This single line of code:
+  // Creates an new Set object with the given arguments
+  // checks it's size with .size()
+  // and compares it with the original length of the arguments given
+  // this line will return a boolean
+
+  // the new Set object constructor creates a new object based on the arguments given, however
+  // if there are duplicates it won't count them twice therefore the length of the sets object
+  // will be shorter than the original length of the arguments given, and if shorter we will know
+  // that there are duplicates
+  return new Set(arguments).size !== arguments.length;
+}
+
+console.log(areThereDuplicatesLinear(1, 2, 3, 4, 4, 5, 6, 7, 8));
