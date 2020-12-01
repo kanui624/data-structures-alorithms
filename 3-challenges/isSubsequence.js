@@ -58,3 +58,27 @@ console.log(isSubsequence('abc', 'y a slkdj b sdklj '));
 
 // Time: O(N + M)
 // Space: O(1)
+
+// Instructor Solutiuon:
+// Write a function that takes in a string and a possible subsequence of that string
+function isSubsequence(str1, str2) {
+  // initialize a pointer i at 0
+  var i = 0;
+  // initialize a pointer j at 0
+  var j = 0;
+  // check if there isn't a str1 argument or if it's length is 0, if not then return
+  // true
+  if (!str1) return true;
+  // start a while loop that runs while j is less than the length of the str2
+  // argument
+  while (j < str2.length) {
+    // check if str2 at j is equal to str1 at i if so increment i only
+    if (str2[j] === str1[i]) i++;
+    // if i equals the length of str1.length return true
+    if (i === str1.length) return true;
+    // every iteration increment j
+    j++;
+  }
+  // if within the while loop it never return true then return false
+  return false;
+}
