@@ -39,3 +39,22 @@
 // if so increment both pointers up
 // if not only increment the string pointer to check the next character
 // if we exit the while loop having never returned true then return false
+
+const isSubsequence = (sequence, string) => {
+  let strPoint = 0;
+  let seqPoint = 0;
+  while (strPoint < string.length && seqPoint < sequence.length) {
+    if (string[strPoint] === sequence[seqPoint]) {
+      strPoint++;
+      seqPoint++;
+    } else {
+      strPoint++;
+    }
+  }
+  return seqPoint === sequence.length;
+};
+
+console.log(isSubsequence('abc', 'y a slkdj b sdklj '));
+
+// Time: O(N + M)
+// Space: O(1)
