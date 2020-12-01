@@ -66,3 +66,25 @@ const averagePair = (array, target) => {
 };
 
 console.log(averagePair([-1, 0, 3, 4, 5, 6], 4.1));
+
+// Instructor Solution:
+// Write a function that takes in an array and a target integer
+function averagePair(arr, num) {
+  // initialize a start pointer at 0
+  let start = 0;
+  // initialize an end pointer at the end of the array
+  let end = arr.length - 1;
+  // while the start pointer is greater than the end pointer
+  while (start < end) {
+    // create the average from boths ints at start point and end point
+    let avg = (arr[start] + arr[end]) / 2;
+    // if the average is equal to num return true
+    if (avg === num) return true;
+    // else if its greater than the target increment start pointer
+    else if (avg < num) start++;
+    // if it's less than decrement the end pointer
+    else end--;
+  }
+  // if we exit the while loop having never returned true then return false
+  return false;
+}
