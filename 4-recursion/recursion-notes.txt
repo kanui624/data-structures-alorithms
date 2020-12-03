@@ -21,4 +21,9 @@ The two essential parts of a recursive function
     - the base case
     - different input every iteration
 
-Common Problems
+Common Problems and where things go wrong
+    - No base case
+    - Forgetting to return or returning the incorrect things
+    - Don't console.log to end recursive calls because it won't 
+    the call stack will exceed if you don't return 
+    -
