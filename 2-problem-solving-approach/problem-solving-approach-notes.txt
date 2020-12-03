@@ -84,4 +84,4 @@ ASCII codes:
 65 - 90 Upper case English alphabet
 91 - 96 more special characters
 97 - 122 lowercase alphabet
-123 - 127 special characters and delete
+123 - 127 special characters and delete 
