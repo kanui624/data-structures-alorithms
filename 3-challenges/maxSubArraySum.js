@@ -18,3 +18,8 @@
 // maxSubArraySum([1, 4, 2, 10, 23, 3, 1, 0, 10], 4) => 39
 // maxSubArraySum([3, -2, 7, -4, 1, 1, 4, -2, 1], 2) => 5
 // maxSubArraySum([2, 3], 3) => null
+
+// Pseudo Code:
+// if n is greater than the length of the array => return false
+// initialize a pointer firstPoint at 0
+// initialize a pointer secPoint at 1
