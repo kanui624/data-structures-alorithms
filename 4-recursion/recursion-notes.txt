@@ -1,0 +1,24 @@
+Recursion Notes
+
+What is recursion?
+A process (a function in our case) that calls itself
+
+Why Should we know this?
+    - It's everywhere
+    - Even JSON.parse or JSON.stringify are recursive functions
+    - dom.getElementById and DOM traversal algorithms (the dom
+    is a tree structure where nested elements are like nodes in
+    a tree)
+    - Object traversal
+    - We'll see it with more complex data structures
+    
+How recursive functions work
+    - Invoke the same function with a different input until you 
+    reach a base case
+    - The base case is the condition when the recursion ends
+
+The two essential parts of a recursive function
+    - the base case
+    - different input every iteration
+
+
