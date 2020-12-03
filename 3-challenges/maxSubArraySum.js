@@ -55,11 +55,9 @@ const maxSubArraySum = (array, n) => {
     tempSum = tempSum - array[i - n] + array[i];
     if (tempSum > maxSum) {
       maxSum = tempSum;
-    } else {
-      continue;
     }
   }
   return maxSum;
 };
 
-console.log(maxSubArraySum([-3, -5, 6, 7, 13, 2, 4, 1, 7, 9], 4));
+console.log(maxSubArraySum([-3, -5, 6, 7, 13, 2, 4, 1, 7, 9], 2));
