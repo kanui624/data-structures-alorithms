@@ -14,7 +14,14 @@
 // and integer representing the length of a subarray within the given array
 // Edge Cases:
 // What if the integer given is greater than the sum of the entire array? => 0
+// What if length of array is not 0
 // Test I/O:
 // [1, 2, [3, 4, 5] 6, 7, 8, 9] 12 => 3
 // [3, 6, 7, 4, 8, 9] 11 => 2
 // [3, 4, 8 ,4 ,6 ,3 ,6] => 35 => 0
+
+// Pseudo Code:
+// initialize tempSum variable to 0
+// initialize maxSum variable to 0
+// if array.length === 0 return 0
+// for
