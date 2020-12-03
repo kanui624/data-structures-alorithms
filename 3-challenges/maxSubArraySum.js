@@ -5,8 +5,7 @@
 // the original array.
 
 // Restate:
-// Given an array of integers and a number representing the length of a subarray. write a function that
-// returns the greatest sum of a subarray found in the given array
+// Given an array of integers and a number representing the length of a subarray. write a function that returns the greatest sum of a subarray found in the given array
 // Inputs:
 // An unsorted or sorted array and an integer
 // Outputs:
@@ -19,7 +18,25 @@
 // maxSubArraySum([3, -2, 7, -4, 1, 1, 4, -2, 1], 2) => 5
 // maxSubArraySum([2, 3], 3) => null
 
+// [-3, -5, 6, 7, 13, 2 ,4 ,1 ,7, 9], 4 => 28
+// maxSum = 5
+// tempSum = maxSum
+// for(let i = 0; i < n; i++)
+// maxSum += array[i]
+// [-3, -5, 6, 7, 13, 2 ,4 ,1 ,7, 9]
+//
+//
+// tempSum = tempSum - array[i - n] + array[i + 1]
+// if tempSum > MaxSum  => maxSum = tempSum
+
+// tempSum > MaxSum
+
 // Pseudo Code:
-// if n is greater than the length of the array => return false
-// initialize a pointer firstPoint at 0
-// initialize a pointer secPoint at 1
+// Initialize a tempSum variable = 0
+// Intiialize a maxSum variable = 0
+// loop through n values and add them to maxSum
+// set tempSum to maxSum temporarily
+// loop starting at n and iterating through the end of the array
+// tempSum = tempSum - array[i - n] + array[i + 1]
+// if tempSum > MaxSum
+// MaxSum = TempSum
