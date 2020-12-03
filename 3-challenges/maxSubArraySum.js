@@ -40,3 +40,26 @@
 // tempSum = tempSum - array[i - n] + array[i + 1]
 // if tempSum > MaxSum
 // MaxSum = TempSum
+
+const maxSubArraySum = (array, n) => {
+  let tempSum = 0;
+  let maxSum = 0;
+
+  for (let i = 0; i < n; i++) {
+    maxSum += array[i];
+  }
+
+  tempSum = maxSum;
+
+  for (let i = n; i < array.length; i++) {
+    tempSum = tempSum - array[i - n] + array[i];
+    if (tempSum > maxSum) {
+      maxSum = tempSum;
+    } else {
+      continue;
+    }
+  }
+  return maxSum;
+};
+
+console.log(maxSubArraySum([-3, -5, 6, 7, 13, 2, 4, 1, 7, 9], 4));
