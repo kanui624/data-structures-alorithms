@@ -13,20 +13,20 @@
 
 // Another Recursive Helper Example:
 
-// const collectOddValues = (array) => {
-//   let result = [];
+const collectOddValues = (array) => {
+  let result = [];
 
-//   const helper = (helperInput) => {
-//     if (helperInput.length === 0) {
-//       return;
-//     }
-//     if (helperInput[0] % 2 !== 0) {
-//       result.push(helperInput[0]);
-//     }
-//   };
-//   helper(array);
-//   return result;
-// };
+  const helper = (helperInput) => {
+    if (helperInput.length === 0) {
+      return;
+    }
+    if (helperInput[0] % 2 !== 0) {
+      result.push(helperInput[0]);
+    }
+  };
+  helper(array);
+  return result;
+};
 
 // Using helper method recursion allows us to declare outer scoped variables whose
 // values persist through recursive iterations. Example:
@@ -46,23 +46,23 @@
 // tasks allows the outer scoped variables to persist and not be re-initialized
 // Example:
 
-// const doesPersist = (num) => {
-//   let persist = 2;
+const doesPersist = (num) => {
+  let persist = 2;
 
-//   const helper = (helperInput) => {
-//     if (helperInput > 1) {
-//       return helperInput + helper(helperInput - 1);
-//     } else {
-//       return helperInput;
-//     }
-//   };
+  const helper = (helperInput) => {
+    if (helperInput > 1) {
+      return helperInput + helper(helperInput - 1);
+    } else {
+      return helperInput;
+    }
+  };
 
-//   let helperResult = helper(num);
+  let helperResult = helper(num);
 
-//   return persist * helperResult;
-// };
+  return persist * helperResult;
+};
 
-// console.log(doesPersist(3));
+console.log(doesPersist(3));
 
 // Original Example Two:
 // Create function that takes an array and squares every element in the array and
