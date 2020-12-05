@@ -16,3 +16,7 @@
 // productOfArray([1, 2, 3, -4]) => -24
 // Edge Cases:
 // What if the array's length is 0? => return 1
+
+// Pseudo Code:
+// if array.length === 0 return 1
+// return array[0] * productOfArray(array.slice(1))
