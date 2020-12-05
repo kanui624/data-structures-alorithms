@@ -20,3 +20,12 @@
 // If the argument passed in as the base equals 1 return 1
 // If the argument passed in as the exponent equals 0 return 0
 // If the argument passed in as the exponent equals 1 return the base
+
+// Pseudo Code:
+
+const power = (base, exponent) => {
+  if (exponent === 0) return 1;
+  return base * power(base, exponent - 1);
+};
+
+console.log(power(2, 4));
