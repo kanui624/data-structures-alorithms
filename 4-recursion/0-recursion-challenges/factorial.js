@@ -16,3 +16,15 @@
 // factorial(5) => 120
 // Edge Cases:
 // If the integer is 0 return 1
+
+// Pseudo Code:
+// write func factorial
+// If int === 0 => return 1
+// return int * factorial(int - 1)
+
+const factorial = (int) => {
+  if (int === 0) return 1;
+  return int * factorial(int - 1);
+};
+
+console.log(factorial(5));
