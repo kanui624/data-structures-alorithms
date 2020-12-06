@@ -16,3 +16,9 @@
 // reverse("oock") => "kcoo"
 // Edge Cases:
 // What if the string's length is 0? => return ""
+
+// Pseudo Code:
+// check if string length is equal to zero or not
+// pointer at 0 pointer at last char and swap them
+// increment pointer, decrement pointer
+// unless l point is greater than Math.ceiling(string.length / 2)
