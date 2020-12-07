@@ -26,3 +26,34 @@
 // else increment start pointer and recursivley call helper again
 // if start > array.length - 1 return true
 // return recursiveHelper(array, callback)
+
+const someRecursive = (array, callBack) => {
+  if (array.length === 0) return false;
+  let pointer = 0;
+
+  const someHelper = (arrHelper, callHelper) => {
+    if (pointer > arrHelper.length - 1) {
+      return false;
+    } else {
+      let callResult = callHelper(arrHelper[pointer]);
+      if (callResult) {
+        return true;
+      } else {
+        pointer++;
+        return someHelper(arrHelper, callHelper);
+      }
+    }
+  };
+
+  return someHelper(array, callBack);
+};
+
+const greaterThanTen = (int) => {
+  if (int > 10) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(someRecursive([4, 6, 8, 7, 5, 6], greaterThanTen));
