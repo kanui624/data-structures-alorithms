@@ -22,3 +22,25 @@
 // pointer at 0 pointer at last char and swap them
 // increment pointer, decrement pointer
 // unless l point is greater than Math.ceiling(string.length / 2)
+
+const reverse = (str) => {
+  let l = 0;
+  let r = str.length - 1;
+  let splitString = str.split('');
+
+  const reverseHelper = (strHelper) => {
+    if (l >= Math.ceil(strHelper.length / 2) || r <= Math.ceil(strHelper / 2)) {
+      return strHelper;
+    }
+    let temp = strHelper[l];
+    strHelper[l] = strHelper[r];
+    strHelper[r] = temp;
+    l++;
+    r--;
+    return reverseHelper(strHelper);
+  };
+
+  return reverseHelper(splitString).join('');
+};
+
+console.log(reverse('1234567890'));
