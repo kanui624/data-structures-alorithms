@@ -26,3 +26,25 @@
 // if so increment l and decrement r
 // then return a recursive call of the helper function
 // return the value returned from the helper function
+
+//  O(N): Time - O(1): Space
+const isPalindrome = (string) => {
+  let l = 0;
+  let r = string.length - 1;
+
+  const isPalindromeHelper = (stringHelper) => {
+    if (l === r && stringHelper[l] === stringHelper[r]) {
+      return true;
+    } else if (stringHelper[l] === stringHelper[r]) {
+      l++;
+      r--;
+      return isPalindromeHelper(stringHelper);
+    } else {
+      return false;
+    }
+  };
+
+  return isPalindromeHelper(string);
+};
+
+console.log(isPalindrome('abcb'));
