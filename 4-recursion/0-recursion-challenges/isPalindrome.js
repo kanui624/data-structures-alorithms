@@ -16,3 +16,13 @@
 // isPalindrome("racecar") => true
 // Edge Cases:
 // What if the given string's length is 0?
+
+// Pseudo Code:
+// initialize l pointer at 0
+// initialize r pointer at string.length - 1
+// initialize an internal recursive helper function
+// set base case to check if l and r are equal
+// if not return false
+// if so increment l and decrement r
+// then return a recursive call of the helper function
+// return the value returned from the helper function
