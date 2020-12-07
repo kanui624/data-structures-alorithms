@@ -22,3 +22,12 @@
 // check if pointer is > or equal to arrayHelper.length
 // if so return;
 // else capitalize array[pointer][0].toLocalUppercase()
+
+const capitalizeFirst = (arrayOfStrings) => {
+  for (let i = 0; i < arrayOfStrings.length; i++) {
+    arrayOfStrings[i][0].toUpperCase();
+  }
+  return capFirstHelper(arrayOfStrings);
+};
+
+console.log(capitalizeFirst(['hey', 'yo', 'what', 'is', 'up']));
