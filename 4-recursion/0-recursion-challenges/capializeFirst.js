@@ -14,3 +14,11 @@
 // capitalizeFirst([car, taco, banana]) => [Car, Taco, Banana]
 // Edge Cases:
 // What if a string has multiple words in it?
+
+// Pseudo Code:
+// Define a function that accepts one array of strings
+// initialize a pointer at 0
+// define an internal function to handle to recursion
+// check if pointer is > or equal to arrayHelper.length
+// if so return;
+// else capitalize array[pointer][0].toLocalUppercase()
