@@ -38,3 +38,24 @@
 // and set obj[string[i]] = true
 // else
 // string[i] = true
+
+const findLongestSubstring = (string) => {
+  if (string.length === 0) return 0;
+  let charStore = {};
+  let maxCount = 0;
+  let tempCount = 0;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] in charStore) {
+      charStore = {};
+      maxCount = tempCount;
+      tempCount = 1;
+    } else {
+      tempCount++;
+    }
+    charStore[string[i]] = true;
+  }
+  return maxCount;
+};
+
+console.log(findLongestSubstring('abcdefg'));
