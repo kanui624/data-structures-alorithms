@@ -1,0 +1,17 @@
+Sorting Algorithms
+
+- Linear Search 
+    - Best O(N): Time
+    - Worst O(1): Time
+    - Average O(N): Time
+
+- Binary Search
+    - much faster form of Search
+    - rather than eliminating one element at a time, 
+    you can eliminate half of the remaining elements at a time 
+    - binary search only works on sorted arrays
+    - divide and conquer
+
+- Binary search Big O
+    - Worst O(log n): Time
+    - Best  O(1): Time
