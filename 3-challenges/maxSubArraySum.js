@@ -32,6 +32,7 @@
 // tempSum > MaxSum
 
 // Pseudo Code:
+// check if n >
 // Initialize a tempSum variable = 0
 // Intiialize a maxSum variable = 0
 // loop through n values and add them to maxSum
@@ -41,7 +42,7 @@
 // if tempSum > MaxSum
 // MaxSum = TempSum
 
-const maxSubArraySum = (array, n) => {
+const maxSubArraySumOne = (array, n) => {
   let tempSum = 0;
   let maxSum = 0;
 
@@ -60,4 +61,20 @@ const maxSubArraySum = (array, n) => {
   return maxSum;
 };
 
+const maxSubArraySum = (array, n) => {
+  if (n > array.length) return null;
+  let maxSum = 0;
+  for (let i = 0; i < n; i++) {
+    maxSum += array[i];
+  }
+
+  let tempSum = maxSum;
+
+  for (let i = n; i < array.length; i++) {
+    tempSum = tempSum + array[i] - array[i - n];
+    maxSum = Math.max(tempSum, maxSum);
+  }
+
+  return maxSum;
+};
 console.log(maxSubArraySum([-3, -5, 6, 7, 13, 2, 4, 1, 7, 9], 2));
