@@ -20,3 +20,20 @@
 // Edge Case:
 // if array.length === 0? return 0
 // if array.length < n? return 0
+
+// [1, 2, 3, 4, 5, 6, 7, 8], 3)
+//           i
+//
+// Pseudo Code
+// if array.length equals 0 or if n is greater than array.length => return 0
+// define maxSum variable at 0
+// define tempSum variable at 0
+// loop for the length of n and add the first n values in the array to maxSum
+// tempoarily set our tempSum equal to maxSum
+// start an additional adjacent loop to traverse the remainder of the array
+// every iteration add the next value after array[n] to tempsum and subtract the first index
+// in the sub array
+// then check if the new tempSum is greater than of equal to the maxSum
+// if so set maxSum = tempSum
+// else don't reassign maxSum
+// return maxSum
