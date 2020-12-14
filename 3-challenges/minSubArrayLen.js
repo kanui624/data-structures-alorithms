@@ -1,27 +1,21 @@
 // Sliding Window - minSubArrayLen
 // Prompt:
-// Write function called minSubArrayLen which accepts two parameters - an array of positive
+// Write a function called minSubArrayLen which accepts two parameters - an array of positive
 // integers and a positive integer. This function should return the minimal length of a
 // contiguous subarray of which the sum is greater than or equal to the integer passed to the
-// function. If there isn't one, return 0 instead
+// function. If there isn't one, return 0 instead.
 
 // Restate:
-// write a function that accepts an array and an integer. return the length subarray with the
-// least amount of integers to that are greater than or equal to the integer passed in
+// Write a function that take in an array of positive integers and positive integer. Return a
+// subarray of the main array passed in that has is either greater than or equal to the
+// integer passed in. If there are multiple subarray's within the main array that meet this
+// requirement return the subarray with shortest length. If there isn't one return 0
 // Inputs:
-// an array of positive integers and a positive integer
+// An array of positive integers and a positive integer
 // Outputs:
-// and integer representing the length of a subarray within the given array
-// Edge Cases:
-// What if the integer given is greater than the sum of the entire array? => 0
-// What if length of array is not 0
+// A subarray of contiguous integers that when summed together are greater than or equal to
+// the intger passed into the function
 // Test I/O:
-// [1, 2, [3, 4, 5] 6, 7, 8, 9] 12 => 3
-// [3, 6, 7, 4, 8, 9] 11 => 2
-// [3, 4, 8 ,4 ,6 ,3 ,6] => 35 => 0
-
-// Pseudo Code:
-// initialize tempSum variable to 0
-// initialize maxSum variable to 0
-// if array.length === 0 return 0
-// for
+// minSubArrayLen([1, 2, 4, 5, ,6 ,7 ,8], 9) => [5, 4]
+// EdgeCases:
+// if there isn't a subarray that meets the requirements return 0
