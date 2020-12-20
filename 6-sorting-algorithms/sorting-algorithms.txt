@@ -1,0 +1,5 @@
+Bubble Sort
+    - The reason it's called bubble sort is because it's a 
+    sorting algorith where the largest values bubble up on top
+
+    

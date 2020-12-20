@@ -1,4 +1,4 @@
-Sorting Algorithms
+Searching Algorithms
 
 - Linear Search 
     - Best O(N): Time
