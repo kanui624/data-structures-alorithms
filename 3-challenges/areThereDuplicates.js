@@ -105,3 +105,4 @@ console.log(areThereDuplicatesLinear(1, 2, 3, 4, 4, 5, 6, 7, 8));
 // The .size() method calculates the length of a set object
 // arguments is a key word and can be used to represent arguments passed in when there is no
 // specific value written in the paratheses
+//
