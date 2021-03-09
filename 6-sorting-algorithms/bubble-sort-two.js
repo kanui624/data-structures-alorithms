@@ -22,4 +22,4 @@
 
 // const bubbleSort = () => {
 //   for (let i = array.length; i > 0; i--) {}
-// };
+// }
