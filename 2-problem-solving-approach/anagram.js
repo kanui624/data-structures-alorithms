@@ -57,7 +57,7 @@ const validAnagram = (stringOne, stringTwo) => {
 const isAlphaNumeric = (char) => {
   const code = char.charCodeAt(0);
 
-  if (char === ' ') {
+  if (char === " ") {
     return false;
   } else if (
     !(code >= 65 && code <= 90) && // Upper Case Alphabet
@@ -69,9 +69,9 @@ const isAlphaNumeric = (char) => {
   }
 };
 
-console.log('9'.charCodeAt(0));
+console.log("9".charCodeAt(0));
 
-console.log(validAnagram('hannah', 'hannaH'));
+console.log(validAnagram("hannah", "hannaH"));
 
 // Global Complexity:
 // O(1 * 1 * N * N): Time => O(N)
