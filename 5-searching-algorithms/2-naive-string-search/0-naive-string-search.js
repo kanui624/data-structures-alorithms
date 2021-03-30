@@ -41,4 +41,4 @@ const naiveStringSearch = (string, pattern) => {
   return count;
 };
 
-console.log(naiveStringSearch('a;lkdsfja;lksd7a;lskdfjaaljsdkfh', 'yo'));
+console.log(naiveStringSearch("a;lkdsfja;lksyod7a;lskdfjyoaaljsdkfh", "yo"));
